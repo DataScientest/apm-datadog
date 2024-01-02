@@ -19,4 +19,4 @@ LABEL com.datadoghq.tags.env="dev"
 LABEL com.datadoghq.tags.version="0.1.0"
 
 # Run the application without the Datadog agent or tracing
-CMD ["python", "-m", "notes_app.app"]
+CMD ["ddtrace-run", "python", "-m", "notes_app.app"]
